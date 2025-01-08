@@ -3,8 +3,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from kernel.rotary import apply_rotary_emb
-from flash_attn import flash_attn_func
+from .kernel.rotary import apply_rotary_emb
 try:
     from apex.normalization import FusedRMSNorm as RMSNorm 
 except ModuleNotFoundError:
